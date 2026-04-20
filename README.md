@@ -374,11 +374,11 @@ This section provides visual representation of the Order-to-Cash (O2C) process a
 ---
 
 2. System Architecture
-![System Architecture](diagrams/system_Architecture_diagram.png)
+![System Architecture](diagrams/system_Architecture_diagram.jpg)
 ---
 
 3. Document Flow
-![Document Flow](diagrams/Document_Flow_Diagram.png)
+![Document Flow](diagrams/Document_Flow_Diagram.jpg)
 
 
 Future Enhancements
