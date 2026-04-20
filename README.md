@@ -32,7 +32,7 @@ Author
 
 Overview
 This project demonstrates a complete, end-to-end Order-to-Cash (O2C) business process in SAP SD (Sales & Distribution) for TechFlow Solutions Pvt. Ltd., a fictional Indian consumer electronics manufacturer.
-The O2C cycle is the revenue engine of any enterprise — it covers every step from the moment a customer expresses interest in buying a product, all the way to the moment payment is received and financial books are closed. This project implements all 7 stages with:
+The O2C cycle is the revenue engine of any enterprise - it covers every step from the moment a customer expresses interest in buying a product, all the way to the moment payment is received and financial books are closed. This project implements all 7 stages with:
 Real SAP transaction codes and screen-by-screen guidance
 Complete master data (Customer, Material, Pricing)
 SPRO customization steps with exact IMG paths
@@ -45,15 +45,15 @@ India-specific: GST 18%, INR currency, NEFT payment, Net 30 terms
 Company Profile
 Field	Detail
 Company Name	TechFlow Solutions Pvt. Ltd.
-Industry	Consumer Electronics — B2B Manufacturing & Sales
+Industry	Consumer Electronics - B2B Manufacturing & Sales
 HQ Location	Sector 62, Noida, Uttar Pradesh – 201309
 Company Code	TFSOL
-Sales Organization	TF01 — North India
-Distribution Channel	10 — Direct B2B Sales
-Division	01 — Consumer Electronics
+Sales Organization	TF01 - North India
+Distribution Channel	10 - Direct B2B Sales
+Division	01 - Consumer Electronics
 Sales Area	TF01 / 10 / 01
-Manufacturing Plant	TF10 — Noida
-Shipping Point	SP01 — Noida Dispatch Dock
+Manufacturing Plant	TF10 - Noida
+Shipping Point	SP01 - Noida Dispatch Dock
 Customer	RetailMart India Ltd. (CUST-1001)
 Product	TechFlow ProBook 14 Laptop (TF-LAP-001)
 Currency	INR (Indian Rupee)
@@ -108,7 +108,7 @@ O2C Process Flow
              ▼
     ┌───────────────────────────┐
     │ 7. PAYMENT + CLEAR (F-28) │  ◄── INR 5,10,350 received & cleared
-    │    FBL5N: Status = CLEARED│      O2C Cycle COMPLETE ✅
+    │    FBL5N: Status = CLEARED│      O2C Cycle COMPLETE 
     └───────────────────────────┘
 ```
 ---
@@ -178,21 +178,21 @@ Organizational Setup
 
 
 Master Data
-Customer — CUST-1001 (RetailMart India Ltd.)
+Customer - CUST-1001 (RetailMart India Ltd.)
 Field	Value
 Account Group	0001 (Sold-To Party)
 Address	12, Connaught Place, New Delhi – 110001
 GSTIN	07AABCR1234F1Z5
-Payment Terms	ZN30 — Net 30 Days
+Payment Terms	ZN30 - Net 30 Days
 Incoterms	CIF (Cost Insurance Freight)
 Currency	INR
 Credit Limit (FD32)	INR 25,00,000
 Reconciliation A/c	140000 (Accounts Receivable)
-Material — TF-LAP-001 (TechFlow ProBook 14 Laptop)
+Material - TF-LAP-001 (TechFlow ProBook 14 Laptop)
 Field	Value
 Material Type	FERT (Finished Product)
 Base Unit	EA (Each)
-Division	01 — Consumer Electronics
+Division	01 - Consumer Electronics
 Delivering Plant	TF10 (Noida)
 Gross Weight	2.5 KG
 HSN Code	8471 (Laptops)
@@ -201,41 +201,41 @@ Availability Check	02 (Individual Requirements)
 
 
 7-Step O2C Execution
-Step 1 — Inquiry (VA11)
+Step 1 - Inquiry (VA11)
 > *"RetailMart wants to know pricing for 50 ProBook 14 laptops"*
 T-Code: VA11 | Type: IN
 Key Fields: Sales Area TF01/10/01, Customer CUST-1001, Material TF-LAP-001, Qty 50
 Output: Inquiry document INQ-10000001
 Business Purpose: Log customer interest without any legal commitment
-Step 2 — Quotation (VA21)
+Step 2 - Quotation (VA21)
 > *"TechFlow formally offers the product at INR 45,000/unit, valid 30 days"*
 T-Code: VA21 | Type: QT | Ref: INQ-10000001
 Validity: 18-Apr-2026 to 18-May-2026
 Output: Quotation QT-20000001 | Expected value: INR 21,37,500
 Business Purpose: Legally binding offer communicated to customer
-Step 3 — Sales Order (VA01)
+Step 3 - Sales Order (VA01)
 > *"RetailMart accepts and orders 10 units initially"*
 T-Code: VA01 | Type: OR | Ref: QT-20000001
 Customer PO: PO-RM-2026-0041
 Output: SO-30000001 | Net Value: INR 4,32,500
 Business Purpose: Legal purchase agreement — triggers all downstream steps
-Step 4 — Delivery (VL01N)
+Step 4 - Delivery (VL01N)
 > *"Warehouse picks 10 laptops and prepares for dispatch"*
 T-Code: VL01N | Shipping Point: SP01 | Ref: SO-30000001
 Output: DEL-80000001 | Picking confirmed at SL01
 Business Purpose: Authorize and plan physical goods movement
-Step 5 — Post Goods Issue (VL02N)
-> *"Goods dispatched — inventory reduced, cost recognized"*
+Step 5 - Post Goods Issue (VL02N)
+> *"Goods dispatched - inventory reduced, cost recognized"*
 T-Code: VL02N → Post Goods Issue button
-Effect: Stock –10 EA | Dr COGS 2,50,000 | Cr Inventory 2,50,000
+Effect: Stock - 10 EA | Dr COGS 2,50,000 | Cr Inventory 2,50,000
 Business Purpose: Transfer ownership and recognize cost of goods sold
-Step 6 — Billing / Invoice (VF01)
+Step 6 - Billing / Invoice (VF01)
 > *"TechFlow sends GST-compliant invoice to RetailMart"*
 T-Code: VF01 | Type: F2 | Ref: DEL-80000001
 Output: INV-90000001 | Total: INR 5,10,350 | Due: 25-May-2026
 FI Entry: Dr AR 5,10,350 | Cr Revenue 4,32,500 | Cr GST 77,850
-Step 7 — Payment & Clearing (F-28)
-> *"RetailMart pays via NEFT on 20-May — cycle complete"*
+Step 7 - Payment & Clearing (F-28)
+> *"RetailMart pays via NEFT on 20-May - cycle complete"*
 T-Code: F-28 | Amount: INR 5,10,350
 Verify: FBL5N → Status: CLEARED 
 FI Entry: Dr Bank 5,10,350 | Cr AR 5,10,350
@@ -311,17 +311,17 @@ Payment Due: 25-May-2026 (Net 30 Days from invoice date)
 FI Accounting Entries
 At Post Goods Issue
 Account	Description	Debit	Credit
-500000	Cost of Goods Sold	2,50,000	—
-300000	Finished Goods Inventory	—	2,50,000
+500000	Cost of Goods Sold	2,50,000	-
+300000	Finished Goods Inventory	-	2,50,000
 At Billing (Invoice Creation)
 Account	Description	Debit	Credit
-140000	Accounts Receivable	5,10,350	—
-800000	Revenue — Electronics	—	4,32,500
-175000	GST Output Tax Payable	—	77,850
+140000	Accounts Receivable	5,10,350	-
+800000	Revenue - Electronics	-	4,32,500
+175000	GST Output Tax Payable	-	77,850
 At Payment Receipt
 Account	Description	Debit	Credit
-113100	Bank — HDFC Account	5,10,350	—
-140000	Accounts Receivable	—	5,10,350
+113100	Bank - HDFC Account	5,10,350	-
+140000	Accounts Receivable	-	5,10,350
 ---
 
 
@@ -350,23 +350,19 @@ T-Code	Description	Stage
 
 
 Screenshots
-> 14 labeled screenshots in `/screenshots/` folder covering every O2C stage.
-> See [`screenshots/SCREENSHOTS_GUIDE.md`](screenshots/SCREENSHOTS_GUIDE.md) for details on what each image shows.
-#	Screenshot	Transaction
-01	SAP Easy Access — SD Menu	Home
-02	Create Inquiry	VA11
-03	Quotation with Conditions	VA23
-04	Sales Order Overview	VA03
-05	Document Flow (Inquiry → Invoice)	VA03 > Extras
-06	Pricing Conditions Tab	VA03 > Item
-07	Create Delivery	VL01N
-08	Post Goods Issue Confirmation	VL02N
-09	Billing Document	VF03
-10	FI Accounting Entry at Billing	VF03 > Acctg
-11	Incoming Payment	F-28
-12	Cleared AR Line Item	FBL5N
-13	SPRO Configuration Tree	SPRO
-14	ABAP ALV Report Output	ZSO_VIEWER
+> Screenshots in `/screenshots/` folder illustrate key stages of the Order-to-Cash (O2C) process including sales order creation, delivery, goods issue, and billing.
+
+| # | Screenshot | Transaction |
+|---|-----------|-------------|
+| 01 | Sales Order Creation | VA01 |
+| 02 | Pricing Conditions | VA01 / VA03 |
+| 03 | Sales Order Overview | VA03 |
+| 04 | Delivery Creation | VL01N |
+| 05 | Delivery Overview | VL01N |
+| 06 | Change Delivery | VL02N |
+| 07 | Post Goods Issue | VL02N |
+| 08 | Billing Creation | VF01 |
+| 09 | Billing Overview | VF03 |
 ---
 
 
@@ -382,11 +378,11 @@ Future Enhancements
 
 
 What Makes This Project Stand Out
-Full cross-module integration — SD triggers FI accounting entries automatically, demonstrating real enterprise system value
-India-specific compliance — GST 18%, HSN codes, NEFT payment, GSTIN on customer master
-Condition technique mastery — PR00, K007, KF00, MWST in pricing procedure ZTFPR1
-ABAP technical depth — Custom ALV report bridging functional SD and technical development
-End-to-end traceability — Document flow from Inquiry → Payment Clearing is fully documented
+Full cross-module integration - SD triggers FI accounting entries automatically, demonstrating real enterprise system value
+India-specific compliance - GST 18%, HSN codes, NEFT payment, GSTIN on customer master
+Condition technique mastery - PR00, K007, KF00, MWST in pricing procedure ZTFPR1
+ABAP technical depth - Custom ALV report bridging functional SD and technical development
+End-to-end traceability - Document flow from Inquiry → Payment Clearing is fully documented
 ---
 
 
