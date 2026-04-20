@@ -366,6 +366,21 @@ Screenshots
 ---
 
 
+Diagrams
+This section provides visual representation of the Order-to-Cash (O2C) process and system integration.
+---
+1. O2C Process Flow
+![O2C Flow](diagrams/Order_to_cash.jpg)
+---
+
+2. System Architecture
+![System Architecture](diagrams/system_Architecture_diagram.png)
+---
+
+3. Document Flow
+![Document Flow](diagrams/Document_Flow_Diagram.png)
+
+
 Future Enhancements
 [ ] Credit Management (FD32): Auto-block orders exceeding customer credit limit
 [ ] Returns Processing: RE order type → Return Delivery → Credit Memo cycle
