@@ -1,4 +1,4 @@
-# ZSODATA — SAP Data Dictionary Table Definition
+# ZSODATA - SAP Data Dictionary Table Definition
 
 ## How to Create the ZSODATA Structure in SE11
 
@@ -10,11 +10,11 @@
 
 ### Step 2: Short Description
 ```
-TechFlow — Sales Order Data (O2C Report Structure)
+TechFlow - Sales Order Data (O2C Report Structure)
 ```
 
 ### Step 3: Delivery Class
-- Set to: **A** (Application Table — master and transaction data)
+- Set to: **A** (Application Table - master and transaction data)
 
 ### Step 4: Data Browser / Table View Maintenance
 - Set to: **Display/Maintenance Allowed**
