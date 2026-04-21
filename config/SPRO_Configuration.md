@@ -1,13 +1,13 @@
 # SPRO Configuration Reference
-## TechFlow Solutions Pvt. Ltd. — SAP SD O2C Setup
+TechFlow Solutions Pvt. Ltd. - SAP SD O2C Setup
 
 > **Transaction:** SPRO → SAP Reference IMG
 
 ---
 
-## 1. Enterprise Structure — Definition
+1. Enterprise Structure - Definition
 
-### 1.1 Define Company Code
+1.1 Define Company Code
 ```
 Path: SPRO > Enterprise Structure > Definition > Financial Accounting
       > Edit, Copy, Delete, Check Company Code
@@ -20,7 +20,8 @@ Action: New Entry
   Language     : EN
 ```
 
-### 1.2 Define Sales Organization
+1.2 Define Sales Organization
+
 ```
 Path: SPRO > Enterprise Structure > Definition > Sales and Distribution
       > Define, Copy, Delete, Check Sales Organization
@@ -31,7 +32,8 @@ Action: New Entry
   Address   : Sector 62, Noida, UP – 201309
 ```
 
-### 1.3 Define Distribution Channel
+1.3 Define Distribution Channel
+
 ```
 Path: SPRO > Enterprise Structure > Definition > Sales and Distribution
       > Define, Copy, Delete, Check Distribution Channel
@@ -39,7 +41,8 @@ Path: SPRO > Enterprise Structure > Definition > Sales and Distribution
   20 = Dealer Network (future)
 ```
 
-### 1.4 Define Division
+1.4 Define Division
+
 ```
 Path: SPRO > Enterprise Structure > Definition > Logistics – General
       > Define, Copy, Delete, Check Division
@@ -49,44 +52,50 @@ Path: SPRO > Enterprise Structure > Definition > Logistics – General
 
 ---
 
-## 2. Enterprise Structure — Assignment
+2. Enterprise Structure - Assignment
 
-### 2.1 Assign Sales Organization to Company Code
+2.1 Assign Sales Organization to Company Code
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Sales and Distribution
       > Assign Sales Organization to Company Code
   TF01 → TFSOL
 ```
 
-### 2.2 Assign Distribution Channel to Sales Organization
+2.2 Assign Distribution Channel to Sales Organization
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Sales and Distribution
       > Assign Distribution Channel to Sales Organization
   10 → TF01
 ```
 
-### 2.3 Assign Division to Sales Organization
+2.3 Assign Division to Sales Organization
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Sales and Distribution
       > Assign Division to Sales Organization
   01 → TF01
 ```
 
-### 2.4 Set Up Sales Area
+2.4 Set Up Sales Area
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Sales and Distribution
       > Set Up Sales Area
   TF01 / 10 / 01 (North India / Direct / Electronics)
 ```
 
-### 2.5 Assign Plant to Sales Organization
+2.5 Assign Plant to Sales Organization
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Sales and Distribution
       > Assign Sales Organization – Distribution Channel – Plant
   TF01 / 10 → TF10 (Noida Plant)
 ```
 
-### 2.6 Assign Shipping Point to Plant
+2.6 Assign Shipping Point to Plant
+
 ```
 Path: SPRO > Enterprise Structure > Assignment > Logistics Execution
       > Assign Shipping Point to Plant
@@ -95,9 +104,10 @@ Path: SPRO > Enterprise Structure > Assignment > Logistics Execution
 
 ---
 
-## 3. Sales Document Types
+3. Sales Document Types
 
-### 3.1 Standard Document Types Used (No Custom Config Needed)
+3.1 Standard Document Types Used (No Custom Config Needed)
+
 ```
 Path: SPRO > Sales and Distribution > Sales > Sales Documents
       > Sales Document Header > Define Sales Document Types
@@ -110,9 +120,10 @@ Path: SPRO > Sales and Distribution > Sales > Sales Documents
 
 ---
 
-## 4. Pricing Procedure
+4. Pricing Procedure
 
-### 4.1 Create Pricing Procedure ZTFPR1
+4.1 Create Pricing Procedure ZTFPR1
+
 ```
 Path: SPRO > SD > Basic Functions > Pricing > Pricing Control
       > Define and Assign Pricing Procedures
@@ -143,9 +154,10 @@ Step 4: Assign Pricing Procedure
 
 ---
 
-## 5. Output Determination (Invoice PDF)
+5. Output Determination (Invoice PDF)
 
-### 5.1 Billing Output — RD00
+5.1 Billing Output - RD00
+
 ```
 Path: SPRO > SD > Basic Functions > Output Control
       > Output Determination > Maintain Output Determination for Billing
@@ -164,24 +176,27 @@ Condition Record:
 
 ---
 
-## 6. Copy Control
+6. Copy Control
 
-### 6.1 Inquiry → Quotation (VA21 references VA11)
+6.1 Inquiry → Quotation (VA21 references VA11)
+
 ```
 Path: SPRO > SD > Sales > Maintain Copy Control for Sales Documents
       > Copying Control: Sales Document to Sales Document
   Source: IN (Inquiry) → Target: QT (Quotation)
   Pos/Neg Quantities: +
-  Copy Item No.: ✅
+  Copy Item No.: tick 
 ```
 
-### 6.2 Quotation → Sales Order (VA01 references VA21)
+6.2 Quotation → Sales Order (VA01 references VA21)
+
 ```
   Source: QT → Target: OR
   Same settings as above
 ```
 
-### 6.3 Delivery → Invoice (VTFL)
+6.3 Delivery → Invoice (VTFL)
+
 ```
 Path: SPRO > SD > Billing > Billing Documents
       > Maintain Copying Control for Billing Documents
@@ -193,7 +208,7 @@ Path: SPRO > SD > Billing > Billing Documents
 
 ---
 
-## 7. Shipping Point Determination
+7. Shipping Point Determination
 
 ```
 Path: SPRO > Logistics Execution > Shipping > Basic Shipping Functions
@@ -205,7 +220,7 @@ Rule: Shipping Cond (01) + Loading Group (0001) + Plant (TF10) = SP01
 
 ---
 
-## 8. Credit Management (Basic Setup)
+8. Credit Management (Basic Setup)
 
 ```
 Path: SPRO > SD > Basic Functions > Credit Management/Risk Management
