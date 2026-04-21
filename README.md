@@ -403,13 +403,13 @@ End-to-end traceability - Document flow from Inquiry → Payment Clearing is ful
 
 Author
 Field	Details
-Name	[Your Full Name]
-Roll No.	[Your Roll Number]
-Batch / Program	[e.g., SAP SD — 2025-26]
-Institution	KIIT
-Submission	April 21, 2026
-Module	SAP SD (Sales & Distribution)
-Process	Order-to-Cash (O2C)
+Name: Ritika Kalra
+Roll No.: 23053294
+Batch / Program: 2023-2027|
+Institution: KIIT
+Submission: April 21, 2026
+Module:	SAP SD (Sales & Distribution)
+Process: Order-to-Cash (O2C)
 ---
 
 
