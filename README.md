@@ -1,4 +1,4 @@
-SAP SD — Order-to-Cash (O2C) End-to-End Capstone Project
+SAP SD - Order-to-Cash (O2C) End-to-End Capstone Project
 <div align="center">
 ![SAP](https://img.shields.io/badge/SAP-SD%20Module-0070F2?style=for-the-badge&logo=sap&logoColor=white)
 ![ABAP](https://img.shields.io/badge/ABAP-Custom%20Report-FF6600?style=for-the-badge)
@@ -63,7 +63,7 @@ Currency	INR (Indian Rupee)
 O2C Process Flow
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║              TechFlow Solutions — O2C Process Flow               ║
+║              TechFlow Solutions - O2C Process Flow               ║
 ╚══════════════════════════════════════════════════════════════════╝
 
     [CUSTOMER: RetailMart India Ltd.]
