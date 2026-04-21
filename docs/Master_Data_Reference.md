@@ -1,9 +1,9 @@
 # Master Data Reference
-## TechFlow Solutions Pvt. Ltd. — SAP SD O2C Project
+## TechFlow Solutions Pvt. Ltd. - SAP SD O2C Project
 
 ---
 
-## Customer Master — CUST-1001
+## Customer Master - CUST-1001
 
 | Field | Value |
 |-------|-------|
@@ -36,7 +36,7 @@
 
 ---
 
-## Material Master — TF-LAP-001
+## Material Master - TF-LAP-001
 
 | Field | Value |
 |-------|-------|
@@ -63,29 +63,29 @@
 
 ## Pricing Condition Records (VK11)
 
-### PR00 — Base Price
+### PR00 - Base Price
 | Sales Org | DC | Material | Valid From | Valid To | Amount | Currency | Per |
 |-----------|-----|----------|-----------|----------|--------|----------|-----|
 | TF01 | 10 | TF-LAP-001 | 01.01.2026 | 31.12.2026 | 45,000.00 | INR | 1 EA |
 
-### K007 — Customer Discount
+### K007 - Customer Discount
 | Sales Org | DC | Customer | Valid From | Valid To | Rate |
 |-----------|-----|----------|-----------|----------|------|
 | TF01 | 10 | CUST-1001 | 01.01.2026 | 31.12.2026 | 5% |
 
-### KF00 — Freight Surcharge
+### KF00 - Freight Surcharge
 | Sales Org | DC | Material | Valid From | Valid To | Amount | Per |
 |-----------|-----|----------|-----------|----------|--------|-----|
 | TF01 | 10 | TF-LAP-001 | 01.01.2026 | 31.12.2026 | 500.00 INR | 1 EA |
 
-### MWST — Output Tax (GST)
+### MWST - Output Tax (GST)
 | Country | Tax Code | Tax % | Account Key |
 |---------|----------|-------|-------------|
 | IN | A1 | 18% | MWS |
 
 ---
 
-## Pricing Calculation — Sample Order (10 Units)
+## Pricing Calculation - Sample Order (10 Units)
 
 ```
 Material     : TF-LAP-001 (TechFlow ProBook 14)
