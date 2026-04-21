@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report  : ZSODATA
 *& Title   : Sales Order ALV Report - O2C Data Viewer
-*& Author  : Ritika Kalra | 3rd Year | KIIT SAP Capstone Project | Batch: 2023-2027
+*& Author  : Ritika Kalra | 3rd Year(B.Tech(CSE) | Roll No.: 23053294 | KIIT SAP Capstone Project | Batch: 2023-2027
 *& Company : TechFlow Solutions Pvt. Ltd. (Fictional)
 *& Date    : April 2026
 *& Desc    : Displays Sales Order Header + Item data in an interactive
