@@ -124,20 +124,20 @@ Payment Due            : Net 30 → 25-May-2026
 ### At Post Goods Issue (VL02N)
 | GL Account | Description | Debit | Credit |
 |------------|-------------|-------|--------|
-| 500000 | Cost of Goods Sold | 2,50,000 | — |
-| 300000 | Finished Goods Inventory | — | 2,50,000 |
+| 500000 | Cost of Goods Sold | 2,50,000 | - |
+| 300000 | Finished Goods Inventory | - | 2,50,000 |
 
 *(COGS assumed at INR 25,000/unit standard cost)*
 
 ### At Billing / Invoice (VF01)
 | GL Account | Description | Debit | Credit |
 |------------|-------------|-------|--------|
-| 140000 | Accounts Receivable (CUST-1001) | 5,10,350 | — |
-| 800000 | Revenue — Electronics Sales | — | 4,32,500 |
-| 175000 | GST Output Tax Payable | — | 77,850 |
+| 140000 | Accounts Receivable (CUST-1001) | 5,10,350 | - |
+| 800000 | Revenue - Electronics Sales | - | 4,32,500 |
+| 175000 | GST Output Tax Payable | - | 77,850 |
 
 ### At Payment Receipt (F-28)
 | GL Account | Description | Debit | Credit |
 |------------|-------------|-------|--------|
-| 113100 | Bank — HDFC Current Account | 5,10,350 | — |
-| 140000 | Accounts Receivable (CUST-1001) | — | 5,10,350 |
+| 113100 | Bank - HDFC Current Account | 5,10,350 | - |
+| 140000 | Accounts Receivable (CUST-1001) | - | 5,10,350 |
