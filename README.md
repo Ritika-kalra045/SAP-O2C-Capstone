@@ -405,7 +405,7 @@ Author
 Field	Details
 Name: Ritika Kalra
 Roll No.: 23053294
-Batch / Program: 2023-2027|
+Batch / Program: 2023-2027| B.Tech(CSE)
 Institution: KIIT
 Submission: April 21, 2026
 Module:	SAP SD (Sales & Distribution)
