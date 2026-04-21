@@ -1,7 +1,7 @@
 *&---------------------------------------------------------------------*
 *& Report  : ZSODATA
-*& Title   : Sales Order ALV Report — O2C Data Viewer
-*& Author  : [Your Name] | KIIT SAP Capstone Project
+*& Title   : Sales Order ALV Report - O2C Data Viewer
+*& Author  : Ritika Kalra | 3rd Year | KIIT SAP Capstone Project | Batch: 2023-2027
 *& Company : TechFlow Solutions Pvt. Ltd. (Fictional)
 *& Date    : April 2026
 *& Desc    : Displays Sales Order Header + Item data in an interactive
@@ -64,7 +64,7 @@ START-OF-SELECTION.
   CALL SCREEN 100.
 
 *----------------------------------------------------------------------*
-* SCREEN 100 — PBO (Process Before Output)
+* SCREEN 100 - PBO (Process Before Output)
 *----------------------------------------------------------------------*
 MODULE status_0100 OUTPUT.
   SET PF-STATUS 'SOLST'.          " Set custom menu/toolbar
@@ -121,7 +121,7 @@ MODULE status_0100 OUTPUT.
 ENDMODULE.
 
 *----------------------------------------------------------------------*
-* SCREEN 100 — PAI (Process After Input)
+* SCREEN 100 - PAI (Process After Input)
 *----------------------------------------------------------------------*
 MODULE user_command_0100 INPUT.
 
